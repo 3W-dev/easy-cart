@@ -1,0 +1,249 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2024-02-16T13:14:34.281Z",
+  "__export_source": "insomnia.desktop.app:v2022.7.0",
+  "resources": [
+    {
+      "_id": "req_73264ae4a4074cf5b69619cd39edf7b0",
+      "parentId": "wrk_93453bf5d2534dd3ac437bb4f3333356",
+      "modified": 1708089083944,
+      "created": 1708088454904,
+      "url": "{{ _.baseUrl }}/applyDiscount/123",
+      "name": "Apply seasonal discount",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"type\": \"SEASONAL\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1708088454904,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "wrk_93453bf5d2534dd3ac437bb4f3333356",
+      "parentId": null,
+      "modified": 1708088186408,
+      "created": 1708088186408,
+      "name": "EasyCart",
+      "description": "",
+      "scope": "collection",
+      "_type": "workspace"
+    },
+    {
+      "_id": "req_3385d544c9d543848ed4636073cc9131",
+      "parentId": "wrk_93453bf5d2534dd3ac437bb4f3333356",
+      "modified": 1708089076288,
+      "created": 1708088838850,
+      "url": "{{ _.baseUrl }}/applyDiscount/123",
+      "name": "Apply regular discount",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"type\": \"REGULAR\",\n\t\"percentage\": 20.0\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1708088386454.5,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_8b445b74026441d78fbded6bf00fe1bb",
+      "parentId": "wrk_93453bf5d2534dd3ac437bb4f3333356",
+      "modified": 1708089069544,
+      "created": 1708088900172,
+      "url": "{{ _.baseUrl }}/applyDiscount/123",
+      "name": "Apply newsletter discount",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"type\": \"NEWSLETTER\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1708088352229.75,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_accfd0c61f3343f6ae0b52536808b326",
+      "parentId": "wrk_93453bf5d2534dd3ac437bb4f3333356",
+      "modified": 1708089225386,
+      "created": 1708088318005,
+      "url": "{{ _.baseUrl }}/addItem/123",
+      "name": "Add item",
+      "description": "",
+      "method": "PUT",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"name\": \"shirt\",\n\t\"quantity\": 1,\n\t\"price\": 20.0\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1708088318005,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_00e6510b3b7c454fa3f30da4c3a26af4",
+      "parentId": "wrk_93453bf5d2534dd3ac437bb4f3333356",
+      "modified": 1708089057965,
+      "created": 1708088192227,
+      "url": "{{ _.baseUrl }}/total/123",
+      "name": "Get total",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1708088192227,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_219d2a2fc5c148b680eaf792acb74e32",
+      "parentId": "wrk_93453bf5d2534dd3ac437bb4f3333356",
+      "modified": 1708089240540,
+      "created": 1708089149613,
+      "url": "{{ _.baseUrl }}/listSessions",
+      "name": "List all shopping sessions",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1708088192202,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_4bff526101d5415aaadb46f128e9d576",
+      "parentId": "wrk_93453bf5d2534dd3ac437bb4f3333356",
+      "modified": 1708089065281,
+      "created": 1708088796453,
+      "url": "{{ _.baseUrl }}/clear/123",
+      "name": "Clear Cart",
+      "description": "",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1708088192177,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "env_bc3e4c62c01b6afce4ec3b108f88291a59eaa12d",
+      "parentId": "wrk_93453bf5d2534dd3ac437bb4f3333356",
+      "modified": 1708089039955,
+      "created": 1708088186415,
+      "name": "Base Environment",
+      "data": {
+        "baseUrl": "http://localhost:8081/cart"
+      },
+      "dataPropertyOrder": {
+        "&": [
+          "baseUrl"
+        ]
+      },
+      "color": null,
+      "isPrivate": false,
+      "metaSortKey": 1708088186415,
+      "_type": "environment"
+    },
+    {
+      "_id": "jar_bc3e4c62c01b6afce4ec3b108f88291a59eaa12d",
+      "parentId": "wrk_93453bf5d2534dd3ac437bb4f3333356",
+      "modified": 1708088186416,
+      "created": 1708088186416,
+      "name": "Default Jar",
+      "cookies": [],
+      "_type": "cookie_jar"
+    },
+    {
+      "_id": "spc_2a06cc967f3445708047894a62eea797",
+      "parentId": "wrk_93453bf5d2534dd3ac437bb4f3333356",
+      "modified": 1708088186410,
+      "created": 1708088186410,
+      "fileName": "EasyCart",
+      "contents": "",
+      "contentType": "yaml",
+      "_type": "api_spec"
+    }
+  ]
+}
