@@ -3,6 +3,7 @@ package it.trew.demo.controller;
 import it.trew.demo.model.Cart;
 import it.trew.demo.model.CartItem;
 import it.trew.demo.model.Discount;
+import it.trew.demo.model.Outcome;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.*;
@@ -18,16 +19,23 @@ public class CartController {
     private static final Map<Long, Cart> carts = new HashMap<>();
 
     @PostMapping("/addItem/{sessionId}")
-    public String addItemToCart(@PathVariable Long sessionId, @RequestBody CartItem item) {
-        getCart(sessionId).addItem(item);
-        logger.info("carts: {}", carts);
-        return "Item added to cart";
+    public CartItem addItemToCart(@PathVariable Long sessionId, @RequestBody CartItem item) {
+        Cart cart = getCart(sessionId);
+        cart.addItem(item);
+        logger.info("cart: {}", cart);
+        return item;
     }
 
     @PostMapping("/applyDiscount/{sessionId}")
-    public String applyDiscount(@PathVariable Long sessionId, @RequestBody Discount discount) {
-        getCart(sessionId).applyDiscount(discount);
-        return "Discount applied";
+    public Outcome applyDiscount(@PathVariable Long sessionId, @RequestBody Discount discount) {
+        Outcome result = new Outcome("discount applied");
+        try {
+            getCart(sessionId).applyDiscount(discount);
+        } catch (Exception e) {
+            logger.error(e.getMessage(), e);
+            result.setMessage(e.getMessage());
+        }
+        return result;
     }
 
     @GetMapping("/total/{sessionId}")
@@ -40,7 +48,12 @@ public class CartController {
         carts.remove(sessionId);
     }
 
-    @GetMapping("/listSessions")
+    @GetMapping("/{sessionId}")
+    public Cart list(@PathVariable Long sessionId) {
+        return getCart(sessionId);
+    }
+
+    @GetMapping("/sessions")
     public Set<Long> listSessions() {
         return carts.keySet();
     }

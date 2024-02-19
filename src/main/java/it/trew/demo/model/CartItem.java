@@ -11,4 +11,8 @@ public class CartItem {
     private String name;
     private double price;
     private int quantity;
+
+    public void incQuantity(int quantity) {
+        this.quantity += quantity;
+    }
 }

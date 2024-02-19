@@ -166,7 +166,7 @@
       "parentId": "wrk_93453bf5d2534dd3ac437bb4f3333356",
       "modified": 1708089240540,
       "created": 1708089149613,
-      "url": "{{ _.baseUrl }}/listSessions",
+      "url": "{{ _.baseUrl }}/sessions",
       "name": "List all shopping sessions",
       "description": "",
       "method": "GET",
